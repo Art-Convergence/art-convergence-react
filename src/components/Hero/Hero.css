@@ -4,15 +4,33 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  position: relative;
+  background-image: url('https://wallpaper.dog/large/10718088.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: white;
   text-align: center;
-  padding: 2rem;
+  /* padding: 2rem; */
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 1;
 }
 
 .hero-content {
   max-width: 1200px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .hero-title {
@@ -34,8 +52,8 @@
   font-size: 1.2rem;
   border: none;
   border-radius: 50px;
-  background: white;
-  color: #3b82f6;
+  background: #FE7833; 
+  color: white;
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -62,4 +80,19 @@
   .hero {
     padding: 1rem;
   }
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://wallpaper.dog/large/10718088.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
 } 

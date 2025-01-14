@@ -1,28 +1,30 @@
 import { motion } from 'framer-motion'
 import './Gallery.css'
 
-function Gallery() {
+function GalleryPage() {
   const projects = [
     {
       id: 1,
       title: 'Project 1',
-      image: 'https://via.placeholder.com/300',
+      image: 'https://artconvergence-html.netlify.app/Media/IMG-20241118-WA0003.jpg',
     },
     {
       id: 2,
       title: 'Project 2',
-      image: 'https://via.placeholder.com/300',
+      image: 'https://artconvergence-html.netlify.app/Media/IMG-20241118-WA0004.jpg',
     },
     {
       id: 3,
       title: 'Project 3',
-      image: 'https://via.placeholder.com/300',
+      image: 'https://artconvergence-html.netlify.app/Media/IMG-20241118-WA0005.jpg',
     }
   ]
 
   return (
     <section className="gallery">
-      <h2>Our Work</h2>
+      <div className="gallery-header">
+        <h2>Our Work</h2>
+      </div>
       <div className="gallery-grid">
         {projects.map((project) => (
           <motion.div
@@ -43,4 +45,4 @@ function Gallery() {
   )
 }
 
-export default Gallery 
+export default GalleryPage 

@@ -1,8 +1,9 @@
+import GalleryPage from '../components/Gallery'
 function Gallery() {
   return (
-    <main>
-      <h1>Our Gallery</h1>
-    </main>
+    <div className="page-padding">
+      <GalleryPage />
+    </div>
   )
 }
 

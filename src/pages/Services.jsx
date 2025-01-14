@@ -2,9 +2,9 @@ import Services from '../components/Services'
 
 function ServicesPage() {
   return (
-    <main>
+    <div>
       <Services />
-    </main>
+    </div>
   )
 }
 

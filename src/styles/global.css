@@ -7,16 +7,27 @@
 body {
   font-family: 'Inter', sans-serif;
   width: 100%;
+  display: contents;
   overflow-x: hidden;
 }
 
 .app {
   min-height: 100vh;
-  display: contents;
+  display: flex;
   flex-direction: column;
   width: 100%;
 }
 
 section {
   width: 100%;
-} 
+}
+
+.page-padding {
+  padding-top: 80px; /* Space for navbar */
+  margin-top: 0.05em;   /* Additional margin as requested */
+}
+
+/* If you need to override this anywhere */
+.home .page-padding {
+  margin-top: 0;     /* Remove margin for home page */
+}

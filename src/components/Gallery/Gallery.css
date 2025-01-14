@@ -30,4 +30,15 @@
   padding: 1rem;
   background: rgba(0,0,0,0.7);
   color: white;
-} 
+}
+
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.gallery-header h2 {
+  color: #343a40;
+}

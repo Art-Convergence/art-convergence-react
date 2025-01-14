@@ -3,7 +3,7 @@ import { useState } from 'react'
 import emailjs from '@emailjs/browser'
 import './Contact.css'
 
-function Contact() {
+function ContactForm() {
   const [formData, setFormData] = useState({
     from_name: '',
     email: '',
@@ -109,4 +109,4 @@ function Contact() {
   )
 }
 
-export default Contact 
+export default ContactForm 

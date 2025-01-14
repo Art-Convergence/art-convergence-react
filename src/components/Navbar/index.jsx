@@ -27,6 +27,7 @@ function Navbar() {
           <motion.h1 
             whileHover={{ scale: 1.05 }}
             className="logo"
+            style={{ fontFamily: "'Barrio', cursive" }}
           >
             The Art Convergence
           </motion.h1>

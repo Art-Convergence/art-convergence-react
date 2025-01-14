@@ -1,9 +1,11 @@
-function Contact() {
-  return (
-    <main>
-      <h1>Contact Us</h1>
-    </main>
-  )
-}
+import ContactForm from '../components/Contact'
 
-export default Contact 
+function Contact() {
+    return (
+      <div className="page-padding">
+        <ContactForm />
+      </div>
+    );
+  }
+
+export default Contact;
