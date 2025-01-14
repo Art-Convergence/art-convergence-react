@@ -1,0 +1,15 @@
+.home {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+section {
+  width: 100%;
+  padding: 6rem 2rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 1rem;
+  }
+} 
