@@ -61,22 +61,22 @@ function Footer() {
         <div className="footer-section">
           <h4>Follow Us</h4>
           <div className="social-links">
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/company/105435888" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
-            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <a href="https://www.facebook.com/profile.php?id=61565739043517&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
               <FaFacebookF />
             </a>
             <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <FaInstagram />
             </a>
-            <a href="https://artstation.com/" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
+            <a href="https://artconvergence.artstation.com/" target="_blank" rel="noopener noreferrer" aria-label="ArtStation">
               <FaArtstation />
             </a>
             <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (formerly Twitter)">
               <FaXTwitter />
             </a>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/artconvergence" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
           </div>
@@ -85,6 +85,17 @@ function Footer() {
       
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} The Art Convergence. All rights reserved.</p>
+        <p className="developer-credit">
+          Made with <span className="heart">❤️</span> by{" "}
+          <a 
+            href="https://www.linkedin.com/in/wali-haider-6497a5251/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="developer-link"
+          >
+            Syed Wali Haider
+          </a>
+        </p>
       </div>
     </footer>
   )

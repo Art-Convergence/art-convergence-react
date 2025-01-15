@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Gallery from '../components/Gallery'
 import Contact from '../components/Contact'
+import AboutPage from '../components/About'
 import './Home.css'
 
 function Home() {
@@ -16,6 +17,7 @@ function Home() {
       <Hero />
       <Services />
       <Gallery />
+      <AboutPage />
       <Contact />
     </motion.main>
   )

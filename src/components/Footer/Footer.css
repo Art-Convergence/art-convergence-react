@@ -166,4 +166,38 @@
 
 .contact-info a:hover {
   color: #FE7833;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.developer-credit {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.heart {
+  color: #ff4444;
+  display: inline-block;
+  animation: heartbeat 1.5s ease infinite;
+}
+
+.developer-link {
+  color: #FE7833;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.developer-link:hover {
+  color: #ff6b1a;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
 } 

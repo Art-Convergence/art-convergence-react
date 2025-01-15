@@ -4,6 +4,9 @@ import AppRoutes from './routes'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import './styles/global.css'
+import emailjs from '@emailjs/browser';
+
+emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
 
 function App() {
   return (
