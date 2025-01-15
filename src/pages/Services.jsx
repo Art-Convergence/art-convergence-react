@@ -2,7 +2,7 @@ import Services from '../components/Services'
 
 function ServicesPage() {
   return (
-    <div>
+    <div className="page-padding">
       <Services />
     </div>
   )

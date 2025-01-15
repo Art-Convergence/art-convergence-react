@@ -1,24 +1,169 @@
 .footer {
-  background: #1a1a1a;
-  color: white;
-  padding: 2rem;
-  margin-top: auto;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 4rem 2rem 1rem;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
 }
 
-.footer-section {
-  margin: 1rem;
+.footer-section h3 {
+  color: #FE7833;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.footer-section p {
+  color: #999;
+  line-height: 1.6;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.footer-links li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-links a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.link-icon {
+  color: #FE7833;
+  font-size: 1.2rem;
+}
+
+.footer-links a:hover {
+  color: #FE7833;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links a:hover {
+  color: #FE7833;
+  background: rgba(254, 120, 51, 0.1);
+  transform: translateY(-3px);
 }
 
 .footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   text-align: center;
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  color: #666;
+}
+
+@media (max-width: 1200px) {
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1.5rem 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-links {
+    display: inline-block;
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .footer-links li,
+  .contact-info p {
+    justify-content: center;
+  }
+}
+
+.company-name {
+  font-family: 'Barrio', cursive;
+  color: #FE7833;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-section h3.company-name {
+  font-family: 'Barrio', cursive;
+  color: #FE7833;
+  font-size: 1.5rem;
+  margin-bottom: 0.1rem;
+}
+
+.contact-info p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-icon {
+  color: #FE7833;
+  font-size: 1.2rem;
+}
+
+.contact-info a:hover {
+  color: #FE7833;
 } 

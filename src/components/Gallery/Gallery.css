@@ -1,44 +1,298 @@
 .gallery {
-  padding: 4rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
+.gallery-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.subtitle {
+  color: #FE7833;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.gallery-header h2 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 2rem;
+}
+
+.gallery-filters {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.filter-btn {
+  padding: clamp(0.4rem, 1.5vw, 0.5rem) clamp(1rem, 2.5vw, 1.5rem);
+  border: 2px solid #FE7833;
+  background: transparent;
+  color: #ffffff;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: #FE7833;
+  color: white;
+}
+
+/* Masonry Grid Styles */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 2rem auto;
+  display: flex;
+  margin-left: clamp(-15px, -2vw, -30px);
+  width: auto;
+}
+
+.gallery-grid-column {
+  padding-left: clamp(15px, 2vw, 30px);
+  background-clip: padding-box;
 }
 
 .gallery-item {
   position: relative;
-  border-radius: 8px;
+  margin-bottom: clamp(15px, 2vw, 30px);
+  break-inside: avoid;
+  border-radius: 12px;
   overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
-.gallery-item img {
+.gallery-media {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
 
-.project-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: rgba(0,0,0,0.7);
-  color: white;
+.gallery-item:hover .gallery-media {
+  transform: scale(1.05);
 }
 
-.gallery-header {
+/* Modal Styles */
+.modal-container {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  justify-content: center;
+  padding: clamp(0rem, 2vw, 1rem);
 }
 
-.gallery-header h2 {
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  position: relative;
+  background: #1a1a1a;
+  width: 95vw;
+  max-width: 1200px;
+  max-height: 90vh;
+  border-radius: clamp(0px, 2vw, 12px);
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  width: clamp(32px, 4vw, 44px);
+  height: clamp(32px, 4vw, 44px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(24px, 3vw, 32px);
+  color: #FE7833;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-close:hover {
+  color: #ff9557;
+}
+
+.modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  width: clamp(40px, 5vw, 56px);
+  height: clamp(40px, 5vw, 56px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(36px, 5vw, 48px);
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  transition: color 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.modal-nav:hover {
+  color: #FE7833;
+}
+
+.modal-prev {
+  left: clamp(10px, 2vw, 20px);
+}
+
+.modal-next {
+  right: calc(clamp(250px, 30vw, 300px) + clamp(10px, 2vw, 20px));
+}
+
+.modal-grid {
+  display: grid;
+  grid-template-columns: 1fr clamp(250px, 30vw, 300px);
+  height: 100%;
+  max-height: 90vh;
+}
+
+.modal-main {
+  position: relative;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 2vw, 2rem);
+}
+
+.modal-media {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-details {
+  padding: clamp(1rem, 2vw, 2rem);
+  background: #fff;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.modal-details h3 {
   color: #343a40;
+  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+}
+
+.modal-details .category {
+  color: #FE7833;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-details .description {
+  color: #6c757d;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+@media (max-width: 1200px) {
+  .gallery {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .modal-grid {
+    grid-template-columns: 1fr 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    padding: 0 1rem;
+  }
+
+  .modal-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .modal-details {
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 30vh;
+  }
+
+  .modal-next {
+    right: clamp(10px, 2vw, 20px);
+  }
+
+  .modal-content {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .modal-container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    padding: 0 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 768px) {
+  .modal-grid {
+    grid-template-columns: 1fr 250px;
+  }
+
+  .modal-details {
+    max-height: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: none;
+  }
+}
+
+/* Remove focus styles for all buttons in modal */
+.modal-content button:focus {
+  outline: none;
+  box-shadow: none;
 }
