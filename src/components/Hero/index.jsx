@@ -26,7 +26,8 @@ function Hero() {
         >
           Transforming ideas into digital excellence
         </motion.p>
-        <motion.button 
+        <motion.a 
+          href="/contact"
           className="cta-button"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -35,7 +36,7 @@ function Hero() {
           transition={{ delay: 0.6 }}
         >
           Get Started
-        </motion.button>
+        </motion.a>
       </motion.div>
     </section>
   )
